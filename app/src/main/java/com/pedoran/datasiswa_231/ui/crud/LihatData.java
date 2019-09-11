@@ -9,12 +9,15 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.pedoran.datasiswa_231.R;
 import com.pedoran.datasiswa_231.adapter.SiswaAdapter;
 import com.pedoran.datasiswa_231.database.DatabaseSiswa;
 import com.pedoran.datasiswa_231.database.Siswa;
+import com.pedoran.datasiswa_231.ui.Dashboard;
 
 import java.util.List;
 
@@ -23,6 +26,8 @@ public class LihatData extends AppCompatActivity implements SiswaAdapter.UserAct
     RecyclerView.LayoutManager layoutManager;
     List<Siswa> listSiswaInfo;
     Context context;
+
+    Button btnAdd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +40,15 @@ public class LihatData extends AppCompatActivity implements SiswaAdapter.UserAct
         recyclerView.setLayoutManager(layoutManager);
 
         setupRV();
+
+        btnAdd = findViewById(R.id.btnAdd);
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent pindah = new Intent(context,InputData.class);
+                startActivity(pindah);
+            }
+        });
     }
 
     public void setupRV(){
@@ -51,7 +65,7 @@ public class LihatData extends AppCompatActivity implements SiswaAdapter.UserAct
 //        Toast.makeText(context, "CLICKED!", Toast.LENGTH_SHORT).show();
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle("Pilihan")
-                .setPositiveButton("LihatData", new DialogInterface.OnClickListener() {
+                .setPositiveButton("Lihat Detail", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 //                        Toast.makeText(context, "LIHAT DATA!", Toast.LENGTH_SHORT).show();
@@ -60,7 +74,7 @@ public class LihatData extends AppCompatActivity implements SiswaAdapter.UserAct
                         context.startActivity(detailData);
                     }
                 })
-                .setNegativeButton("UbahData", new DialogInterface.OnClickListener() {
+                .setNegativeButton("Ubah Data", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 //                        Toast.makeText(context, "UBAH DATA!", Toast.LENGTH_SHORT).show();
@@ -70,7 +84,7 @@ public class LihatData extends AppCompatActivity implements SiswaAdapter.UserAct
                         context.startActivity(updateData);
                     }
                 })
-                .setNeutralButton("HapusData", new DialogInterface.OnClickListener() {
+                .setNeutralButton("Hapus Data", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 //                        Toast.makeText(context, "HAPUS DATA!", Toast.LENGTH_SHORT).show();
@@ -82,5 +96,11 @@ public class LihatData extends AppCompatActivity implements SiswaAdapter.UserAct
 
         AlertDialog dialog = builder.create();
         dialog.show();
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent pindah = new Intent(this,Dashboard.class);
+        startActivity(pindah);
     }
 }
