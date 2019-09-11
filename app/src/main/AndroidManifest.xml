@@ -13,9 +13,9 @@
         <activity android:name=".ui.crud.LihatData" />
         <activity android:name=".ui.crud.DetailData" />
         <activity android:name=".ui.crud.InputData" />
-        <activity android:name=".ui.Dashboard" />
-        <activity android:name=".ui.SplashScreen" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.Dashboard">
+        </activity>
+        <activity android:name=".ui.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
