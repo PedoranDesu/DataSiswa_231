@@ -13,13 +13,17 @@
         android:layout_height="match_parent" />
 
     <Button
-        android:elevation="3dp"
         android:id="@+id/btnAdd"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:elevation="3dp"
+        android:layout_margin="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tambah Data"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        />
+        android:background="#00000000"
+        android:textSize="20sp"
+        android:textColor="#B20000"
+        android:text="INPUT DATA"
+        android:drawableStart="@drawable/ic_add_circle_outline_black_24dp"/>
 
 </RelativeLayout>

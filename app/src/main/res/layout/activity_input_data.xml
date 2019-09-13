@@ -1,112 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".ui.crud.InputData">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        android:id="@+id/inputLabel"
-        android:text="INPUT DATA" />
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:id="@+id/inputLabel"
+            android:text="INPUT DATA" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="NIS" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="NIS" />
 
-    <EditText
-        android:id="@+id/inputNIS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:ems="10"
-        android:drawableStart="@drawable/ic_create_black_24dp"
-        android:inputType="textPersonName"
-        android:hint="NIS" />
+        <EditText
+            android:id="@+id/inputNIS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ems="10"
+            android:drawableStart="@drawable/ic_create_black_24dp"
+            android:inputType="textPersonName"
+            android:hint="NIS" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Nama Lengkap" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Nama Lengkap" />
 
-    <EditText
-        android:id="@+id/inputNama"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:ems="10"
-        android:drawableStart="@drawable/ic_group_black_24dp"
-        android:inputType="textPersonName"
-        android:hint="Nama" />
+        <EditText
+            android:id="@+id/inputNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ems="10"
+            android:drawableStart="@drawable/ic_group_black_24dp"
+            android:inputType="textPersonName"
+            android:hint="Nama" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Tanggal Lahir" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Tanggal Lahir" />
 
-    <EditText
-        android:id="@+id/inputTglLahir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:ems="10"
-        android:drawableStart="@drawable/ic_date_range_black_24dp"
-        android:inputType="textPersonName"
-        android:hint="Format : mm/dd/yyyy" />
+        <EditText
+            android:id="@+id/inputTglLahir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ems="10"
+            android:drawableStart="@drawable/ic_date_range_black_24dp"
+            android:inputType="date" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Jenis Kelamin" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Jenis Kelamin" />
 
-    <EditText
-        android:id="@+id/inputGender"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:ems="10"
-        android:drawableStart="@drawable/ic_person_black_24dp"
-        android:inputType="textPersonName"
-        android:hint="L/P" />
+        <EditText
+            android:id="@+id/inputGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ems="10"
+            android:drawableStart="@drawable/ic_person_black_24dp"
+            android:inputType="textPersonName"
+            android:hint="L/P" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Alamat" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Alamat" />
 
-    <EditText
-        android:id="@+id/inputAlamat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:ems="10"
-        android:drawableStart="@drawable/ic_place_black_24dp"
-        android:inputType="textPersonName"
-        android:hint="Alamat" />
+        <EditText
+            android:id="@+id/inputAlamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ems="10"
+            android:drawableStart="@drawable/ic_place_black_24dp"
+            android:inputType="textPersonName"
+            android:hint="Alamat" />
+
+    </LinearLayout>
 
     <Button
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
         android:id="@+id/btnInputForm"
+        android:layout_margin="30dp"
+        android:background="#00000000"
+        android:textColor="#B80000"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Submit Data"
-        />
+        android:drawableLeft="@drawable/ic_save_black_24dp"
+        android:textSize="16sp" />
 
-</LinearLayout>
+</RelativeLayout>
